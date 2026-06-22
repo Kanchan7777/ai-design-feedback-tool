@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AI Design Feedback Tool</title>
+</head>
+<body>
+
+    <h1>AI Design Feedback Tool</h1>
+    <p class="welcome">Welcome to the AI Design Feedback Tool!</p>
+
+    <p class="description">The AI Design Feedback Tool is an automated auditing tool that analyzes user interface screenshots to deliver instant, actionable design feedback. By evaluating static visual uploads against strict layout rules, it highlights hidden execution flaws before your product goes live.</p>
+
+    <div class="inputSection">
+        <p>Upload screenshots to get instant design feedback!</p>
+        <input type="file" multiple id="screenshotUpload" accept="image/*" hidden>
+        <label for="screenshotUpload" class="uploadLabel">Choose Files</label>
+        <span id="fileName">No file chosen</span>
+    </div>
+
+    <button id="getFeedback">Get Feedback</button>
+    
+    <div class="outputSection">
+        <p>Your Suggestions will be visible here...</p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
