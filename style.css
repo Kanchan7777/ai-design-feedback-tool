@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #3F1D38;
+    color: #E19898;
+    padding: 40px 25px;
+}
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #F5E6E8;
+    font-weight: 1000;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.welcome, .description {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 25px;
+}
+
+.inputSection p {
+    padding: 4rem;
+    text-align: center;
+    margin: 30px 0;
+    color: #e198ae;
+    font-size: 30px;
+}
+
+.uploadLabel {
+    display: inline-block;
+    background-color: #A2678A;
+    color: #4b3c3c;
+    padding: 100px 200px;
+    border-radius: 1rem;
+    border: 3px solid #a9649d;
+    cursor: pointer;
+    font-size: 50px;
+    font-weight: 750;
+    margin: 20px 10px;
+    margin-left: 40px;
+    transition: background 0.2s;
+}
+
+.uploadLabel:hover {
+    background-color: #a97b7b;
+}
+
+#fileName {
+    margin-left: 40px;
+    color: #a16f6f;
+    font-size: 4rem;
+}
+#screenshotUpload {
+    display: none;
+}
+
+#getFeedback {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #F5E6E8;
+    background-color: #A2678A;
+    width: 90%;
+    padding: 20px;
+    margin-left: 40px;
+    font-size: 30px;
+    border-radius: 1rem;
+}
+
+#getFeedback:hover {
+    background-color: #a97b7b;
+}
+
+button {
+    font-weight: 750;
+    border: none;
+    padding: 14px 32px;
+    margin: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: background 0.2;
+}
+
+.outputSection {
+    margin: 20px 40px;
+    padding: 20px;
+    background-color: #2a1225;
+    border-radius: 1rem;
+    line-height: 1.8;
+    font-size: 18px;
+}
