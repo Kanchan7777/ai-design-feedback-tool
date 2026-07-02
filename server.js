@@ -1,12 +1,20 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 app.use(cors());
-app.use(express.json({ limit: '10mb' })); // images can be large
+app.use(express.json({ limit: '10mb' }));
+
+// Serve frontend files
+app.use(express.static(__dirname));
 
 app.post('/get-feedback', async (req, res) => {
     const { imageBase64, mimeType } = req.body;
@@ -46,4 +54,10 @@ app.post('/get-feedback', async (req, res) => {
     }
 });
 
-app.listen(5000, () => console.log('Server running on port 5000'));
+// Catch-all to serve index.html for any other route
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
