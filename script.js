@@ -32,7 +32,7 @@ getFeedbackBtn.addEventListener('click', async () => {
         const mimeType = file.type;
 
         try {
-            const response = await fetch('http://localhost:5000/get-feedback', {
+            const response = await fetch('/get-feedback', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ imageBase64: base64Data, mimeType })
